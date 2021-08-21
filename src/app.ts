@@ -4,6 +4,8 @@ import 'express-async-errors';
 
 import { middlewareError } from './middlewares/error/Error';
 
+import '@modules/database/connect';
+
 import { routes } from './routes/routes';
 
 const app = express();
