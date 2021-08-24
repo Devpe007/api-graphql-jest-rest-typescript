@@ -1,6 +1,3 @@
-import mongoose from 'mongoose';
+import { createConnection } from "typeorm";
 
-mongoose.connect('mongodb+srv://AndDev07:<password>@api-graphql-jest.snruk.mongodb.net/api_graphql_jest?retryWrites=true&w=majority', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-});
+createConnection().then(() => console.log('Successfully connected with database'));
