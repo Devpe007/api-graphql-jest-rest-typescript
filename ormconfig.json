@@ -2,9 +2,9 @@
     "type": "sqlite",
     "database": "src/modules/database/database.sqlite",
     "migrations": ["src/modules/database/migrations/*.ts"],
-    "entities": ["src/entities/*.ts"],
+    "entities": ["src/modules/entities/*.ts"],
     "cli": {
         "migrationsDir": "src/modules/database/migrations",
-        "entitiesDir": "src/entities"
+        "entitiesDir": "src/modules/entities"
     }
 }
