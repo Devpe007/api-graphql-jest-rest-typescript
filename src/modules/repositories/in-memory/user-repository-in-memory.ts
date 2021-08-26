@@ -1,6 +1,6 @@
 import { v4 as uuid } from 'uuid';
 
-import { User } from "@modules/entities/User";
+import { User } from "../../entities/User";
 import { IUserResopositoryInMemory } from "./interface/IUserRespositoryInMemory";
 
 export class UserRepositoryInMemory implements IUserResopositoryInMemory{

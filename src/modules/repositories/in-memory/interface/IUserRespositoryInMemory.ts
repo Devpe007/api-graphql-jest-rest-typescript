@@ -1,4 +1,4 @@
-import { User } from "@modules/entities/User";
+import { User } from "../../../entities/User";
 
 export interface IUserResopositoryInMemory {
     createUser(user: User): Promise<User>;
