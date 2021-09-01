@@ -18,4 +18,18 @@ describe('Create User', () => {
         expect(user).toHaveProperty('id');
         expect(user.name).toBe('Gustavo');
     });
+
+    it("should not be able to create an existing user", async () => {
+        const userData: ICreateUserDTO = {
+            name: 'Exists Name',
+            email: "existsemail@gmail.com",
+            password: "textexisting",
+        };
+
+        await createUserService.execute(userData);
+
+        await expect(createUserService.execute(userData)).rejects.toEqual(
+            new Error('User Alreary Exists')
+        );
+    });
 });
